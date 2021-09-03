@@ -1,4 +1,4 @@
-# Flutter Shopping Cart with GetX, Stripe and Firebase
+# Flutter Shopping Cart with GetX and Firebase
 
 A new Flutter project.
 
