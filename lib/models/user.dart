@@ -29,8 +29,9 @@ class UserModel {
       _result.add(CartItemModel.fromMap(element));
     });
     }
-    print("result ${_result}");
-     _result.sort((a, b) => a.id.compareTo(b.id));
+    final ids = _result.map((e) => e.id).toSet();
+    _result.retainWhere((x) => ids.remove(x.id));
+    _result.sort((a, b) => a.id.compareTo(b.id));
     return _result;
   }
 
