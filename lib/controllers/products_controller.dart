@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:get/get.dart';
 import 'package:untitled/constants/firebase.dart';
 import 'package:untitled/models/product.dart';
