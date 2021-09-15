@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/constants/controllers.dart';
 import 'package:untitled/models/product.dart';
+import 'package:untitled/utils/helpers/helperFuncs.dart';
 import 'package:untitled/widgets/custom_text.dart';
 
 class SingleProductWidget extends StatelessWidget {
@@ -51,7 +52,7 @@ class SingleProductWidget extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 8.0),
                 child: CustomText(
-                  text: "\$${product.price}",
+                  text: "\$${prettify(double.parse(product.price))}",
                   size: 22,
                   weight: FontWeight.bold,
                 ),

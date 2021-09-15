@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:untitled/constants/controllers.dart';
 import 'package:untitled/screens/home/widgets/cart_item_widget.dart';
+import 'package:untitled/utils/helpers/helperFuncs.dart';
 import 'package:untitled/widgets/custom_btn.dart';
 import 'package:untitled/widgets/custom_text.dart';
 
@@ -13,7 +14,7 @@ class ShoppingCartWidget extends StatelessWidget {
         ListView(
           children: [
             SizedBox(
-              height: 10,
+              height: 15,
             ),
             Center(
               child: CustomText(
@@ -23,7 +24,7 @@ class ShoppingCartWidget extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 5,
+              height: 20,
             ),
             Obx(()=>Column(
               children: userController.userModel.value.cart
@@ -38,7 +39,7 @@ class ShoppingCartWidget extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               padding: EdgeInsets.all(8),
               child: Obx(() => CustomButton(
-                  text: "Pay (\$${cartController.totalCartPrice.value.toStringAsFixed(2)})", onTap: () {
+                  text: "Pay (\$${prettify(cartController.totalCartPrice.value)})", onTap: () {
                   }),)
             ))
       ],

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/constants/controllers.dart';
 import 'package:untitled/models/cart_item.dart';
+import 'package:untitled/utils/helpers/helperFuncs.dart';
 import 'package:untitled/widgets/custom_text.dart';
 
 class CartItemWidget extends StatelessWidget {
@@ -62,7 +63,7 @@ class CartItemWidget extends StatelessWidget {
           padding:
           const EdgeInsets.all(14),
           child: CustomText(
-            text: "\$${cartItem.cost}",
+            text: "\$${prettify(cartItem.cost)}",
             size: 22,
             weight: FontWeight.bold,
           ),
